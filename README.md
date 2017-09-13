@@ -29,7 +29,9 @@ const falsyValue = 0;
 ```
 
 ### Boolean shortcut
-In the lesson on conditional statements, we passed values into the `Boolean()` object to check their truthiness. As a shorter way to convert any value into a boolean, we can use two bang operators:
+In the lesson on conditional statements, we passed values into the `Boolean()` _constructor function_ to check their truthiness. We'll learn all about constructor functions later in the course; for now, just think of it as a factory that optionally takes in some input, _constructs_ a new boolean from that input, and outputs the created boolean.
+
+As a shorter way to convert any value into a boolean, we can use two NOT operators:
 ```js
 const truthyValue = "This value is truthy.";
 
@@ -42,7 +44,7 @@ const truthyValue = "This value is truthy.";
 
 Reading from left-to-right, the JavaScript engine sees the first `!` and looks to the right to check what we're asking it to invert (`!truthyValue`). It then sees the second `!` and looks to the right _again_, this time finding our `truthyValue` variable. The engine resolves `truthyValue` to `"This value is truthy."` and then executes the second `!` operator on it. `!truthyValue` returns `false`, so instead of `!!truthyValue` we're now looking at `!false`. The remaining `!` operator then executes on `false`, inverting the falsy value and evaluating to `true`.
 
-Try inverting various values in the browser's JS console to get a feel for the bang operator. See what happens when you stack a ton of them: `!!!!!!!!!truthyValue`.
+Try inverting various values in the browser's JS console to get a feel for the NOT operator. See what happens when you stack a ton of them: `!!!!!!!!!truthyValue`.
 
 Onto the next!
 
@@ -78,7 +80,7 @@ true && false
 1 + 1 && 'Whatever'
 // => "Whatever"
 
-'The truthiest of truthy strings' && 9 ** 2
+'The truthiest of truthy strings' && 9 * 9
 // => 81
 ```
 
@@ -113,8 +115,8 @@ If the first expression is falsy, `||` returns whatever the second expression ev
 false || 'Whatever'
 // => "Whatever"
 
-1 === 2 || 2 ** 8
-// => 256
+1 === 2 || 8 * 8
+// => 64
 
 '' || 'Not ' + 'an ' + 'empty ' + 'string'
 // => "Not an empty string"
