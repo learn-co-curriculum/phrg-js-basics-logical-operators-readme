@@ -4,9 +4,9 @@
 In this lesson, we'll learn how to negate and combine expressions with JavaScript's three logical operators: NOT (`!`), AND (`&&`), and OR (`||`).
 
 <picture>
-  <source srcset="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/logical-operators/logical.webp" type="image/webp">
-  <source srcset="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/logical-operators/logical.gif" type="image/gif">
-  <img src="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/logical-operators/logical.gif" alt="Logical.">
+  <source srcset="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/logical-operators-readme/logical.webp" type="image/webp">
+  <source srcset="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/logical-operators-readme/logical.gif" type="image/gif">
+  <img src="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/logical-operators-readme/logical.gif" alt="Logical.">
 </picture>
 
 ## Objectives
@@ -44,14 +44,14 @@ const truthyValue = "This value is truthy.";
 
 Reading from left-to-right, the JavaScript engine sees the first `!` and looks to the right to check what we're asking it to invert (`!truthyValue`). It then sees the second `!` and looks to the right _again_, this time finding our `truthyValue` variable. The engine resolves `truthyValue` to `"This value is truthy."` and then executes the second `!` operator on it. `!truthyValue` returns `false`, so instead of `!!truthyValue` we're now looking at `!false`. The remaining `!` operator then executes on `false`, inverting the falsy value and evaluating to `true`.
 
-Try inverting various values in the browser's JS console to get a feel for the NOT operator. See what happens when you stack a ton of them: `!!!!!!!!!truthyValue`.
+Try inverting various values in the browser's JS console to get a feel for the NOT operator. See what happens when you stack a ton of them: `!!!!!!!!!truthyValue`.su
 
 Onto the next!
 
 <picture>
-  <source srcset="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/logical-operators/not.webp" type="image/webp">
-  <source srcset="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/logical-operators/not.gif" type="image/gif">
-  <img src="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/logical-operators/not.gif" alt="Not!">
+  <source srcset="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/logical-operators-readme/not.webp" type="image/webp">
+  <source srcset="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/logical-operators-readme/not.gif" type="image/gif">
+  <img src="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/logical-operators-readme/not.gif" alt="Not!">
 </picture>
 
 ## AND
@@ -164,9 +164,9 @@ if (message === 'Please sign in.' || message === 'Link up with your friends to g
 ```
 
 <picture>
-  <source srcset="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/logical-operators/thats_logic.webp" type="image/webp">
-  <source srcset="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/logical-operators/thats_logic.gif" type="image/gif">
-  <img src="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/logical-operators/thats_logic.gif" alt="That's logic!">
+  <source srcset="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/logical-operators-readme/thats_logic.webp" type="image/webp">
+  <source srcset="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/logical-operators-readme/thats_logic.gif" type="image/gif">
+  <img src="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/logical-operators-readme/thats_logic.gif" alt="That's logic!">
 </picture>
 
 ## Resources
