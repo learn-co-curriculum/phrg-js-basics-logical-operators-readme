@@ -44,7 +44,7 @@ const truthyValue = "This value is truthy.";
 
 Reading from left-to-right, the JavaScript engine sees the first `!` and looks to the right to check what we're asking it to invert (`!truthyValue`). It then sees the second `!` and looks to the right _again_, this time finding our `truthyValue` variable. The engine resolves `truthyValue` to `"This value is truthy."` and then executes the second `!` operator on it. `!truthyValue` returns `false`, so instead of `!!truthyValue` we're now looking at `!false`. The remaining `!` operator then executes on `false`, inverting the falsy value and evaluating to `true`.
 
-Try inverting various values in the browser's JS console to get a feel for the NOT operator. See what happens when you stack a ton of them: `!!!!!!!!!truthyValue`.su
+Try inverting various values in the browser's JS console to get a feel for the NOT operator. See what happens when you stack a ton of them: `!!!!!!!!!truthyValue`.
 
 Onto the next!
 
