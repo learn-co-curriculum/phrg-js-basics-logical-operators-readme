@@ -46,7 +46,7 @@ Reading from left-to-right, the JavaScript engine sees the first `!` and looks t
 
 Try inverting various values in the browser's JS console to get a feel for the NOT operator. See what happens when you stack a ton of them: `!!!!!!!!!truthyValue`.
 
-Onto the next!
+On to the next!
 
 <picture>
   <source srcset="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/logical-operators-readme/not.webp" type="image/webp">
