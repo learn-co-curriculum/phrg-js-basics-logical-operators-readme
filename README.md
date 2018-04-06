@@ -1,7 +1,8 @@
 # JavaScript Logical Operators
 
 ## Overview
-In this lesson, we'll learn how to negate and combine expressions with JavaScript's three logical operators: NOT (`!`), AND (`&&`), and OR (`||`).
+In this lesson, we'll learn how to negate and combine expressions with
+JavaScript's three logical operators: NOT (`!`), AND (`&&`), and OR (`||`).
 
 <picture>
   <source srcset="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/logical-operators-readme/logical.webp" type="image/webp">
@@ -15,7 +16,11 @@ In this lesson, we'll learn how to negate and combine expressions with JavaScrip
 3. Combine conditions with the `&&` and `||` operators.
 
 ## NOT
-The logical NOT operator (`!`), also called the _bang operator_, operates on a single expression, returning the inverse of the expression's truthiness. If `x` resolves to a truthy value, `!x` returns `false`. If `x` is falsy, `!x` returns `true`:
+The logical NOT operator (`!`), also called the _bang operator_, operates on a
+single expression, returning the inverse of the expression's truthiness. If `x`
+resolves to a truthy value, `!x` returns `false`. If `x` is falsy, `!x` returns
+`true`:
+
 ```js
 const truthyValue = "This value is truthy.";
 
@@ -29,9 +34,15 @@ const falsyValue = 0;
 ```
 
 ### Boolean shortcut
-In the lesson on conditional statements, we passed values into the `Boolean()` _constructor function_ to check their truthiness. We'll learn all about constructor functions later in the course; for now, just think of it as a factory that optionally takes in some input, _constructs_ a new boolean from that input, and outputs the created boolean.
+In the lesson on conditional statements, we passed values into the `Boolean()`
+_constructor function_ to check their truthiness. We'll learn all about
+constructor functions later in the course; for now, just think of it as a
+factory that optionally takes in some input, _constructs_ a new boolean from
+that input, and outputs the created boolean.
 
-As a shorter way to convert any value into a boolean, we can use two NOT operators:
+As a shorter way to convert any value into a boolean, we can use two NOT
+operators:
+
 ```js
 const truthyValue = "This value is truthy.";
 
@@ -42,9 +53,17 @@ const truthyValue = "This value is truthy.";
 // => true
 ```
 
-Reading from left-to-right, the JavaScript engine sees the first `!` and looks to the right to check what we're asking it to invert (`!truthyValue`). It then sees the second `!` and looks to the right _again_, this time finding our `truthyValue` variable. The engine resolves `truthyValue` to `"This value is truthy."` and then executes the second `!` operator on it. `!truthyValue` returns `false`, so instead of `!!truthyValue` we're now looking at `!false`. The remaining `!` operator then executes on `false`, inverting the falsy value and evaluating to `true`.
+Reading from left-to-right, the JavaScript engine sees the first `!` and looks
+to the right to check what we're asking it to invert (`!truthyValue`). It then
+sees the second `!` and looks to the right _again_, this time finding our
+`truthyValue` variable. The engine resolves `truthyValue` to `"This value is
+truthy."` and then executes the second `!` operator on it. `!truthyValue`
+returns `false`, so instead of `!!truthyValue` we're now looking at `!false`.
+The remaining `!` operator then executes on `false`, inverting the falsy value
+and evaluating to `true`.
 
-Try inverting various values in the browser's JS console to get a feel for the NOT operator. See what happens when you stack a ton of them: `!!!!!!!!!truthyValue`.
+Try inverting various values in the browser's JS console to get a feel for the
+NOT operator. See what happens when you stack a ton of them: `!!!!!!!!!truthyValue`.
 
 On to the next!
 
@@ -56,13 +75,18 @@ On to the next!
 
 ## AND
 The logical AND (`&&`) operator takes two expressions:
+
 ```js
 expression1 && expression2
 ```
 
-The return value of the `&&` operator is always **one of the two expressions**. If the first expression is falsy, `&&` returns the value of the first expression. If the first expression is truthy, `&&` returns the value of the second expression.
+The return value of the `&&` operator is always **one of the two expressions**.
+If the first expression is falsy, `&&` returns the value of the first
+expression. If the first expression is truthy, `&&` returns the value of the
+second expression.
 
 Again, if the first expression is falsy, `&&` returns that value and exits _without ever checking the second expression_:
+
 ```js
 false && 'Anything'
 // => false
@@ -72,7 +96,9 @@ false && 'Anything'
 // => 0
 ```
 
-If the first expression is truthy, `&&` then returns whatever the second expression evaluates to:
+If the first expression is truthy, `&&` then returns whatever the second
+expression evaluates to:
+
 ```js
 true && false
 // => false
@@ -85,23 +111,35 @@ true && false
 ```
 
 There are effectively three outcomes for the `&&` operator:
+
 | Left side |   Right side   | Return value | Truthiness of return value |
 |-----------|----------------|--------------|----------------------------|
 |   Falsy   | Doesn't matter |  Left side   |           Falsy            |
 |   Truthy  |     Falsy      |  Right side  |           Falsy            |
 |   Truthy  |     Truthy     |  Right side  |           Truthy           |
 
-If the left-side expression is falsy, the right-side expression doesn't matter at all. The `&&` operator returns the left side's falsy value and finishes. If the left-side expression is truthy, the `&&` operator returns the right side's value (whether it's truthy or falsy) and finishes. This is a bit hard to explain in text, so make sure you're testing all of these new operators out in your browser's JavaScript console to get a feel for how they work.
+If the left-side expression is falsy, the right-side expression doesn't matter
+at all. The `&&` operator returns the left side's falsy value and finishes. If
+the left-side expression is truthy, the `&&` operator returns the right side's
+value (whether it's truthy or falsy) and finishes. This is a bit hard to
+explain in text, so make sure you're testing all of these new operators out in
+your browser's JavaScript console to get a feel for how they work.
 
 ## OR
 The logical OR (`||`) operator also takes two expressions:
+
 ```js
 expression1 || expression2
 ```
 
-The return value of the `||` operator is always **one of the two expressions**. If the first expression is truthy, `||` returns the value of the first expression. If the first expression is falsy, `||` returns the value of the second expression.
+The return value of the `||` operator is always **one of the two expressions**.
+If the first expression is truthy, `||` returns the value of the first
+expression. If the first expression is falsy, `||` returns the value of the
+second expression.
 
-If the first expression is truthy, that value is immediately returned and the second expression is never evaluated:
+If the first expression is truthy, that value is immediately returned and the
+second expression is never evaluated:
+
 ```js
 true || 'Whatever'
 // => true
@@ -110,7 +148,9 @@ true || 'Whatever'
 // => 2
 ```
 
-If the first expression is falsy, `||` returns whatever the second expression evaluates to:
+If the first expression is falsy, `||` returns whatever the second expression
+evaluates to:
+
 ```js
 false || 'Whatever'
 // => "Whatever"
@@ -123,16 +163,24 @@ false || 'Whatever'
 ```
 
 There are effectively three outcomes for the `||` operator:
+
 | Left side |   Right side   | Return value | Truthiness of return value |
 |-----------|----------------|--------------|----------------------------|
 |   Truthy  | Doesn't matter |  Left side   |           Truthy           |
 |   Falsy   |     Truthy     |  Right side  |           Truthy           |
 |   Falsy   |     Falsy      |  Right side  |           Falsy            |
 
-If the left-side expression is truthy, the right-side expression doesn't matter at all. The `||` operator returns the left side's truthy value and completes. If the left-side expression is falsy, the `||` operator returns the right side's value (regardless of whether it's truthy or falsy) and completes. As with the `&&` operator, make sure you're testing out all of these outcomes in your browser's JS console!
+If the left-side expression is truthy, the right-side expression doesn't matter
+at all. The `||` operator returns the left side's truthy value and completes.
+If the left-side expression is falsy, the `||` operator returns the right side's
+value (regardless of whether it's truthy or falsy) and completes. As with the
+`&&` operator, make sure you're testing out all of these outcomes in your
+browser's JS console!
 
 ## Linking conditions
-The `&&` and `||` operators are often used to link multiple conditions in a conditional statement:
+The `&&` and `||` operators are often used to link multiple conditions in a
+conditional statement:
+
 ```js
 let user = 'Charles Babbage';
 
