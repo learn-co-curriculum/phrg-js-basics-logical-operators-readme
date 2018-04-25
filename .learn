@@ -6,3 +6,5 @@ languages:
   - javascript
 resources:
   - 2
+
+parent_template: git@github.com:learn-co-curriculum/js-basics-logical-operators-readme.git
