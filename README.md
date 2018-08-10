@@ -217,6 +217,10 @@ if (message === 'Please sign in.' || message === 'Link up with your friends to g
   <img src="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/logical-operators-readme/thats_logic.gif" alt="That's logic!">
 </picture>
 
+## Does this need an update?
+
+Please open a [GitHub issue](https://github.com/learn-co-curriculum/phrg-js-basics-logical-operators-readme/issues) or [pull-reqeust](https://github.com/learn-co-curriculum/phrg-js-basics-logical-operators-readme/pulls). Provide a detailed description that explains the issue you have found or the change you are proposing. Then "@" mention your instructor on the issue or pull-reqeust, and send them a link via Connect.
+
 ## Resources
 - MDN
   + [Logical operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators)
